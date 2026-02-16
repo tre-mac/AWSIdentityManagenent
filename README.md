@@ -1,3 +1,25 @@
 # AWS Identity Managenent
 
-AWS IAM Lab: Introduction to Identity and Access ManagementOverviewThis lab demonstrates how to use AWS Identity and Access Management (IAM) to centrally manage users, security credentials, and permissions for AWS resources. The primary goal is to implement a real-world security scenario by applying the principle of least privilege through groups and policies.+2ObjectivesCreate IAM Users and Groups to organize account access.Apply IAM Policies to groups to define specific service capabilities.Manage Security Credentials by enabling console access and autogenerating passwords.Test Permissions by attempting service actions (e.g., creating S3 buckets) under restricted user roles.+1Lab Configuration1. User and Group MappingThe following identities were created and mapped according to job functions:+1UserAssigned GroupJob Function / Permissionsuser-1S3-SupportRead-Only access to Amazon S3 user-2EC2-SupportRead-Only access to Amazon EC2 user-3EC2-AdminView, Start, and Stop Amazon EC2 instances 2. Policy AttachmentsSpecific AWS-managed policies were attached to each group to enforce access controls:S3-Support Group: AmazonS3ReadOnlyAccess (Grants Get and List permissions).+1EC2-Support Group: AmazonEC2ReadOnlyAccess.EC2-Admin Group: AmazonEC2FullAccess.Key Tasks & ExecutionIdentity ManagementUser Creation: Created three distinct users (user-1, user-2, user-3) and enabled console access for testing.+1Group Inheritance: Users were added to their respective groups, allowing them to inherit permissions automatically via attached policies.+1Permission Testing (Validation)To test the effects of the AmazonS3ReadOnlyAccess policy, a login session was initiated for user-1:Action: Attempted to create a new S3 bucket named testbucket-[initials]-[date].Result: The action failed.Explanation: The AmazonS3ReadOnlyAccess policy only permits viewing resources; it does not grant the s3:CreateBucket permission required for creation.Summary of FindingsCentralized Control: IAM allows for the management of diverse users and permissions from a single dashboard.+1Security Best Practices: By assigning policies to Groups rather than individual users, administrative overhead is reduced and security consistency is maintained.Policy Enforcement: AWS strictly enforces policy boundaries; even with S3 access, a "Read-Only" user cannot perform write operations like bucket creation.
+AWS IAM Lab: Introduction to Identity and Access Management
+Overview
+This repository contains the documentation and configuration details for a lab exploring AWS Identity and Access Management (IAM). The lab focuses on managing users, security credentials, and permissions to control access to AWS resources.
+
+Objectives
+Create IAM Users and Groups.
+
+Apply IAM Policies to groups to define specific capabilities.
+
+Demonstrate a real-world scenario by adding users to groups based on job functions.
+
+Use the IAM Sign-in URL to test account access.
+
+Experiment with the effects of policies on service access.
+_____________________________________________________________________________________________
+Lab Configuration
+1. User & Group Assignments
+The following users and groups were created to simulate a corporate environment:
+User,Group,Permissions Inherited
+user-1,S3-Support,Read-Only access to Amazon S3 +1
+user-2,EC2-Support,Read-Only access to Amazon EC2 +1
+user-3,EC2-Admin,"View, Start, and Stop Amazon EC2 instances +1"
+
