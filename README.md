@@ -20,10 +20,10 @@ Lab Configuration
 The following users and groups were created to simulate a corporate environment:
 
 | User | Group | Permissions Inherited |
-
+| :--- | :---: | ---: |
 | user-1 | S3-Support | Read-Only access to Amazon S3 |
-
+| :--- | :---: | ---: |
 | user-2 | EC2-Support | Read-Only access to Amazon EC2 |
-
+| :--- | :---: | ---: |
 | user-3 | EC2-Admin | View, Start, and Stop Amazon EC2 instances |
 
