@@ -18,6 +18,7 @@ ________________________________________________________________________________
 Lab Configuration
 1. User & Group Assignments
 The following users and groups were created to simulate a corporate environment:
+
 | User | Group | Permissions Inherited |
 | :--- | :--- | :--- |
 | user-1 | S3-Support | Read-Only access to Amazon S3 |
