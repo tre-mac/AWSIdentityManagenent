@@ -36,6 +36,7 @@ S3-Support Group: Attached AmazonS3ReadOnlyAccess, which grants permissions to G
 EC2-Support Group: Attached AmazonEC2ReadOnlyAccess.
 
 EC2-Admin Group: Attached AmazonEC2FullAccess.
+
 ![Example Image](usergroup.png)
 ____________________________________________________________________________________________
 # Key Tasks Performed
