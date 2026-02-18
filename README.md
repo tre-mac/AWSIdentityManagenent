@@ -56,6 +56,7 @@ Result: The action failed.
 
 
 Reasoning: user-1 only has the AmazonS3ReadOnlyAccess policy, which does not include the s3:CreateBucket permission.
+![Example Image](Fail.png)
 _______________________________________________________________________________________________
 #Conclusion
 The lab successfully demonstrates how IAM provides centralized control over AWS identities. By utilizing groups and managed policies, administrators can ensure users have exactly the access they need for their roles without compromising account security.
