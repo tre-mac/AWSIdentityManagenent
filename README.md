@@ -1,4 +1,4 @@
-# AWS Identity Managenent
+# AWS Identity Management
 
 AWS IAM Lab: Introduction to Identity and Access Management
 Overview
